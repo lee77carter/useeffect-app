@@ -8,10 +8,25 @@ const App = () => {
   const reactions = {
     morning: "Awesome! ☀️",
     afternoon: "Fantastic! 😎",
-    evening: "Amazing! 🌙"
+    evening: "Amazing! 🌙",
   };
 
   // experiment with useEffect here!
+
+  // no dependency - repeats hello
+  // useEffect(() => {
+  //   console.log("hello")
+  // })
+
+  // with empty dependency - no repeat hello
+  useEffect(() => {
+    console.log("hello");
+  }, []);
+
+  // with personType dependency - repeats hello
+  // useEffect(() => {
+  //   console.log("hello");
+  // }, [personType]);
 
   return (
     <div className="App">
